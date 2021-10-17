@@ -1,4 +1,4 @@
-from . import fitbit
+import fitbit
 import datetime
 import pandas as pd
 from ast import literal_eval

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from . import sleep
+import sleep
 
 # Create your views here.
 
