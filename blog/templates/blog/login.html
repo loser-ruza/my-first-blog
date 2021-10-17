@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>ログイン</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="/profile/profile_files/profile.png">
+</head>
+
+<header>
+	<center>
+		<h1>ログイン</h1>
+	</center>
+</header>
+<style>
+	header {
+		position: fixed;
+		color: white;
+		width: 100%;
+		height: 70px;
+		background-color: #8dc21f;
+	}
+</style>
+
+<br>
+<br>
+<br>
+
+<body>
+	<div>
+		<!--フォーム-->
+		<form name="login_form">
+			<center>
+				<h1 class="contact-title">ログイン</h1>
+				<p>ID、Passwordをご入力の上、「認証」ボタンをクリックしてください。</p>
+			</center>
+			<div>
+
+				<center>
+					<div>
+						<input type="id" name="id" placeholder="ID">
+					</div>
+					<br>
+					<div>
+						<input type="password" name="pass" placeholder="Password" onchange="nextPage()">
+					</div>
+				</center>
+
+			</div>
+			<button type="button" onClick="nextPage();">認証</button>
+		</form>
+
+		<!--ログイン処理-->
+		<script language="JavaScript" type="text/javascript">
+			function nextPage() {
+				id = document.login_form.id.value
+				pwd = document.login_form.pass.value;
+				location.href = id + pwd + ".html";
+			}
+		</script>
+
+	</div>
+
+	<!--HTMLデザイン-->
+	<center>
+		<p>[Web Designed by
+			<a href="https://kanda-it-school-kensyu.com/">神田IT Shool
+			</a>]
+		</p>
+	</center>
+	<br>
+	<!--広告-->
+	<center>
+		<!-- admax -->
+		<script src="https://adm.shinobi.jp/s/988c2aed4807befea01c9eea88c5d8c6"></script>
+		<!-- admax -->
+	</center>
+</body>
+
+</html>
