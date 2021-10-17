@@ -1,6 +1,6 @@
-from C:\Users\tmset\djangogirls\myvenv\Lib\site-packages import fitbit
+import fitbit
 import datetime
-from C:\Users\tmset\djangogirls\myvenv\Lib\site-packages import pandas as pd
+import pandas as pd
 from ast import literal_eval
 
 # tokenファイルを上書きする関数
