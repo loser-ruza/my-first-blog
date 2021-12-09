@@ -13,7 +13,7 @@ def updateToken(token):
 # ユーザ情報の定義
 CLIENT_ID =  '23BC6R'
 CLIENT_SECRET  = 'b888b16df4a934f27ce4267964d19223'
-TOKEN_FILE = "token.txt"
+TOKEN_FILE = "token2.txt"
 
 # ファイルからtoken情報を読み込む
 tokens = open(TOKEN_FILE).read()

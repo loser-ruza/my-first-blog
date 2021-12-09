@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>睡眠実験主観評価選択</title>
+</head>
+<body>
+
+<p>おはようございます<br>今日はよく眠れましたか？<br>(1つだけ選んでください)<br>
+<div class="reg">
+  <form method="post" action="{% url 'choice' %}">
+    {% csrf_token %}
+    <tr>
+    <td><label for="syukan">よく眠れた！→１、いつも通り→２、あまり眠れなかった…→３</label></td><br>
+    <td><input type="text" name="syukan"></td>
+    </tr>
+    <input type="submit" class="btn" name="buttom">
+ </form>
+</div>
+
+</body>
+</html>
