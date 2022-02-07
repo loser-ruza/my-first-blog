@@ -41,6 +41,13 @@ def login(request):
 
         #送信ボタンが押されたとき
         if 'buttom' in request.POST:
+            if userid == 'sleep' and password == 'sleep':
+                global ID
+                global Pass
+                ID = 'sleep'
+                Pass = 'sleep'
+                return render(request, 'blog/choice.html', {})
+
             for i in range(1, 15):
                 #ID/Passが一致したときログイン、主観評価記録用にページ遷移
                 if userid == 'sleep%d' %i and password == 'sleep%d' %i:
@@ -105,6 +112,8 @@ def choice(request):
             sleepEfficiency = sleep14.sleepEfficiency
         elif ID == 'sleep15' and Pass == 'sleep15':
             sleepEfficiency = sleep15.sleepEfficiency
+        elif ID == 'sleep' and Pass == 'sleep':
+            sleepEfficiency = sleep.sleepEfficiency
 
         #時々sleepEfficiencyが空になるバグがあるので、その場合エラー画面に遷移
         try:
@@ -194,7 +203,7 @@ def choice(request):
                         return render(request,'blog/outputC8.html',{})
                     elif stage==9:
                         return render(request,'blog/outputC9.html',{})
-                        
+
     else:
         return render(request,'blog/choice.html',{})
 
